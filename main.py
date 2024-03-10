@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import time
+from exit import exitn
 def getlink():
   url="https://bingotingo.com/best-social-media-platforms/"
   page=requests.get(url)
@@ -43,6 +44,7 @@ def getlink():
   else:
     print('link not returned')
     return 'w8'
+print(getlink())
 def getlink2():
     f=open("index.html","w")
     message=f'''
@@ -52,6 +54,7 @@ def getlink2():
     f.close()
 
 
-while True:
+while n==0:
   getlink2()
   time.sleep(300)
+
