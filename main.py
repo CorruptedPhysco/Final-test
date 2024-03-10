@@ -39,4 +39,10 @@ def getlink():
     return string.replace(" ", "") 
   return remove(finallink)
 
-f=open("links.txt","a")
+f=open("index.html","w")
+
+message=f'''
+<h1>{getlink()}</h1>
+'''
+f.write(message)
+f.close()
