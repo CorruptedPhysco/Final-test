@@ -37,7 +37,12 @@ def getlink():
   finallink=f'https://ln.ki{g}'
   def remove(string):
     return string.replace(" ", "") 
-  return remove(finallink)
+  if "canva" in finallink:
+    print('link returned')
+    return remove(finallink)
+  else:
+    print('link not returned')
+    return 'w8'
 def getlink2():
     f=open("index.html","w")
     message=f'''
