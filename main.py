@@ -49,4 +49,4 @@ def getlink2():
 
 while True:
   getlink2()
-  time.sleep(5)
+  time.sleep(300)
