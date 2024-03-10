@@ -54,8 +54,8 @@ def getlink2():
     f.close()
 
 
-while True
-:
+while True:
+
   getlink2()
   time.sleep(300)
 
