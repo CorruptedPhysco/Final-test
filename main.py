@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-
+import time
 def getlink():
   url="https://bingotingo.com/best-social-media-platforms/"
   page=requests.get(url)
@@ -38,11 +38,15 @@ def getlink():
   def remove(string):
     return string.replace(" ", "") 
   return remove(finallink)
-
-f=open("index.html","w")
-
-message=f'''
+def getlink2():
+    f=open("index.html","w")
+    message=f'''
 <h1>{getlink()}</h1>
 '''
-f.write(message)
-f.close()
+    f.write(message)
+    f.close()
+
+
+while True:
+  getlink2()
+  time.sleep(5)
