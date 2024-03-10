@@ -39,3 +39,4 @@ def getlink():
     return string.replace(" ", "") 
   return remove(finallink)
 
+f=open("links.txt","a")
