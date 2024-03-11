@@ -43,7 +43,7 @@ def getlink():
     return remove(finallink)
   else:
     print('link not returned')
-    return 'w8'
+    return 'No'
 print(getlink())
 def getlink2():
     f=open("index.html","w")
