@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import time
-from exit import exitn
+from flask import Flask
 def getlink():
   url="https://bingotingo.com/best-social-media-platforms/"
   page=requests.get(url)
@@ -47,16 +47,10 @@ def getlink():
     return 'No'
 
 def getlink2():
-    f=open("index.html","w")
-    message=f'''
-<h1>{getlink()}</h1>
-'''
-    f.write(message)
-    f.close()
-
+  f=open('index.html','w')
+  f.write(f'<h1>{getlink()}</h1>')
+  f.close()
 
 while True:
-
   getlink2()
-  time.sleep(300)
-
+  time.sleep(90)
